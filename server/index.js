@@ -88,10 +88,6 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send({ error: err.message || err });
 });
 
-app.use((err, req, res, next) => {
-    res.status(500).send({ error: `${err}` });
-});
-
 let seededData = true; //Change this to false ONCE to seed the data. 
 
 const init = async () => {
